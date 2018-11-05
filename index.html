@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Crazy super clicker</h2>
+
+<p id="game">Click it and make me grow....</p>
+<br/>
+
+<!-- Here is the big bonus -->
+<a id="music" href="https://www.youtube.com/watch?v=j_QLzthSkfM" target="_blank">Click it... click it good! </a>
+<br />
+
+
+<button type="button" onclick="myFunction(1)">Click it</button>
+<button type="button" disabled="true" id="super" onclick="myFunction(2)">Super Click it</button>
+<button type="button" disabled="true" id="superduper"  onclick="myFunction(10)">Super Duper Click it</button>
+<button type="button" disabled="true" id="superduperultra"  onclick="myFunction(20)">Super Duper Ultra Click it</button>
+<button type="button" disabled="true" id="superduperultramega"  onclick="myFunction(50)">Super Duper Ultra Mega Click it</button>
+<button type="button" disabled="true" id="superduperultramegaomega"  onclick="myFunction(200)">Super Duper Ultra Mega Omega Click it</button>
+<button type="button" disabled="true" id="superduperultramegaomegagamma"  onclick="myFunction(1000)">Super Duper Ultra Mega Omega Gamma Click it</button>
+
+
+<script>
+var x = 1;
+const superLevel = 10;
+const superDuperLevel = 20;
+const superDuperUltraLevel = 250;
+const superDuperUltraMegaLevel = 1000
+const superDuperUltraMegaOmegaLevel = 5000
+const superDuperUltraMegaOmegaGammaLevel = 20000
+document.getElementById("music").style.display = "none";
+
+function myFunction(increment) {
+	x = x + increment;
+console.log("Current X value is:", x); 
+    document.getElementById("game").innerHTML = x;
+    if (x <= superLevel)
+    	document.getElementById("super").disabled = true;
+    else {
+    	document.getElementById("super").disabled = false;
+    	document.getElementById("game").style = "color:RED"
+    }
+    if (x <= superDuperLevel)
+    	document.getElementById("superduper").disabled = true;
+    else {
+    	document.getElementById("superduper").disabled = false;
+        document.getElementById("game").style = "color:ORANGE"
+    }
+        if (x <= superDuperUltraLevel)
+    	document.getElementById("superduperultra").disabled = true;
+    else {
+    	document.getElementById("superduperultra").disabled = false;
+        document.getElementById("game").style = "color:YELLOW"
+        document.getElementById("music").style.display = "block";
+    }
+            if (x <= superDuperUltraMegaLevel)
+    	document.getElementById("superduperultramega").disabled = true;
+    else {
+    	document.getElementById("superduperultramega").disabled = false;
+        document.getElementById("game").style = "color:GREEN"
+    }
+            if (x <= superDuperUltraMegaOmegaLevel)
+    	document.getElementById("superduperultramegaomega").disabled = true;
+    else {
+    	document.getElementById("superduperultramegaomega").disabled = false;
+        document.getElementById("game").style = "color:BLUE"
+    }
+            if (x <= superDuperUltraMegaOmegaGammaLevel)
+    	document.getElementById("superduperultramegaomegagamma").disabled = true;
+    else {
+    	document.getElementById("superduperultramegaomegagamma").disabled = false;
+        document.getElementById("game").style = "color:INDIGO"
+    }
+    	
+}
+</script>
+
+</body>
+</html> 
